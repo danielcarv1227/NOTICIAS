@@ -20,9 +20,9 @@ body {
     background-color: #FFF0FA;
 }
 
-body.menu-open::before {
+body.escurecer::before {
     content: "";
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 26, 0.5);
@@ -46,16 +46,23 @@ body.menu-open::before {
 .header-mobile nav {
     position: fixed;
     background-color: var(--almost-white);
-    right: 0;
+    right: -16rem;
     top: 0;
     height: 100vh;
     width: 16rem;
-    z-index: 979;
+    z-index: 999;
 
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
     gap: 1.5rem;
+
+    transition: 0,7;
+}
+
+
+.header-mobile nav.abrir {
+    right: 0;
 }
 
 .header-mobile nav button {
@@ -74,7 +81,7 @@ body.menu-open::before {
     margin-bottom: 4rem;
 }
 
-.primeira-seçao {
+.primeira-seçao img {
     width: 100%;
     margin-bottom: 1.5rem;
 }
